@@ -1,0 +1,19 @@
+.cart-main-div {
+  background-color: lightblue;
+
+  .cart-div {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .product-item {
+    height: auto;
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

@@ -19,18 +19,6 @@ const data = [
 
 const Index = () => {
  
-
-  // const countHandler = () => {
-  //   console.log("add to clicked");
-  //   dispatch(
-  //     cartActions.addItemToCart({
-  //       id,
-  //       name,
-  //       price,
-  //     })
-  //   );
-  // };
-
   return (
     <div className="item-main-div">
       <h1>Products</h1>

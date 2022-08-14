@@ -1,36 +1,31 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { cartActions } from '../../store/cart-slice';
-import './index.scss';
+import React from "react";
+import { useSelector } from "react-redux";
 
-const Index = () => {
-  const cartItem = useSelector((state) => state.cart.item)
-  console.log("Cart Page",cartItem[0]);
+import CartItem from "./cartItem";
+import "./index.scss";
 
-  const dispatch = useDispatch();
-
-  const removeHandler = () => {
-    dispatch(cartActions.removeFromCart())
-    console.log("remove clciked");
-  }
+const Index = (props) => {
+  const cartItem = useSelector((state) => state.cart.item);
 
   return (
-    <div className='cart-main-div'>
+    <div className="cart-main-div">
       <h1>Your Cart Page</h1>
-      <div className='cart-div'>{
-          cartItem.map((item) => {
-            return(
-              <div className="product-item">
-              <h2>{item.name}</h2>
-              <h3>Price: ₹{item.price}</h3>
-              <h3>{item.description}</h3>
-              <button>+</button>
-              <button onClick={removeHandler}>-</button>
-            </div>
-          )})
-        }</div>
+      <div className="cart-div">
+        {cartItem.map((item) => {
+          return (
+            <CartItem
+              id={item.id}
+              name={item.name}
+              price={item.price}
+              quantity={item.quantity}
+              totalPrice={item.totalPrice}
+              description={item.description}
+            />
+          );
+        })}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;

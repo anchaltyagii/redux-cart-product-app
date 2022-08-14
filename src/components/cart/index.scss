@@ -1,19 +1,30 @@
 .cart-main-div {
-  background-color: lightblue;
-
+  
   .cart-div {
+    background-color: lightblue;
     height: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 
   .product-item {
-    height: auto;
-    width: 350px;
+    height: 150px;
+    width: 500px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    // align-items: center;
+  }
+
+  button {
+    // padding: 10px;
+    height: 30px;
+    width: 40px;
+    background-color: blue;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 500;
+    color: aliceblue;
+    border: 0;
   }
 }

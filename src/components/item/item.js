@@ -1,12 +1,12 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
+import Cart from "../cart/index";
 
 const Item = (props) => {
   const dispatch = useDispatch();
 
   const countHandler = () => {
-    console.log("add to clicked");
     dispatch(
       cartActions.addItemToCart({
         id,
